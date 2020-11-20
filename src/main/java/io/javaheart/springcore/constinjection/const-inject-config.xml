@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<bean class="io.javaheart.springcore.constinjection.Person" id="person">
+		<constructor-arg>
+			<value>123</value>
+		</constructor-arg>
+		<!-- <constructor-arg value="123" type="int" /> -->
+		
+		<constructor-arg value="Jitendra" />
+		<constructor-arg ref="cert1" type="io.javaheart.springcore.constinjection.Certificate"/>
+	</bean>
+	
+	<bean class="io.javaheart.springcore.constinjection.Certificate" name="cert1" c:cname="Android" />
+	     
+	<bean class="io.javaheart.springcore.constinjection.Certificate" id="cert">
+		<constructor-arg value="Java certicate" />
+	</bean>
+</beans>
