@@ -27,4 +27,5 @@
 		<property name="degreeName" value="BCA" />
 	</bean>
 	<bean class="io.javaheart.springcore.pac1.Student" name="student3" p:studentId="222" p:studentName="Nayak" p:degreeName="Bsc." />
+
 </beans>
