@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<bean class="io.javaheart.springcore.pac1.Student" id="student1">
+		<property name="studentId">
+			<value>123</value>
+		</property>
+		
+		<property name="studentName">
+			<value>Jitendra</value>
+		</property>
+		
+		<property name="degreeName">
+			<value>MCA</value>
+		</property>
+	</bean>
+	
+	<bean class="io.javaheart.springcore.pac1.Student" name="student2">
+		<property name="studentId" value="321" />
+		
+		<property name="studentName" value="Jeet" />
+		
+		<property name="degreeName" value="BCA" />
+	</bean>
+	<bean class="io.javaheart.springcore.pac1.Student" name="student3" p:studentId="222" p:studentName="Nayak" p:degreeName="Bsc." />
+</beans>
